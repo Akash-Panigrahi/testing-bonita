@@ -1,0 +1,18 @@
+<div class="container jumbotron" ng-controller="loginController">
+  <h1>
+    <small>Login Form</small>
+  </h1>
+  <br>
+  <form>
+    <div class="col-md-4 form-group">
+      <label for="username">Username: </label>
+      <input type="text" class="form-control" name="username" id="username" value="walter.bates">
+    </div>
+    <div class="col-md-4 form-group">
+      <label for="password">Password: </label>
+      <input type="password" class="form-control" name="password" id="password" value="bpm">
+    </div>
+    <br>
+    <button ng-click="login()" class="btn btn-default btn-primary">Login</button>
+  </form>
+</div>

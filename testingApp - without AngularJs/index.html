@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Testing Bonitasoft BPM</title>
+
+  <!-- Bootstrap 4.0.0-beta.2 CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container-fluid,
+    .col-md-4 {
+      padding: 0;
+    }
+
+    h1.text-secondary {
+      padding: 15px;
+      margin: 0;
+    }
+
+    .jumbotron {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="page-header bg-dark">
+      <h1 class="text-secondary">Testing App</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6 jumbotron">
+        <h3>Testing Form
+          <small> - sending data by javascript</small>
+        </h3>
+        <br>
+        <form>
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" id="maleRadio" value="Male"> Male</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" id="femaleRadio" value="Female"> Female</label>
+          </div>
+          <br>
+          <button class="js-submit btn btn-default btn-primary">Show Gender</button>
+        </form>
+      </div>
+
+      <br>
+
+      <div class="col-md-6 jumbotron">
+        <h3>Testing Form
+          <small> - sending data by form</small>
+        </h3>
+        <br>
+        <form method="post" action="http://localhost:8080/bonita/loginservice">
+          <div class="col-md-4 form-group">
+            <label for="username">Username: </label>
+            <input type="text" class="form-control" name="username" id="username" value="walter.bates">
+          </div>
+          <div class="col-md-4 form-group">
+            <label for="password">Password: </label>
+            <input type="password" class="form-control" name="password" id="password" value="bpm">
+          </div>
+          <br>
+          <button type="submit" class="form-submit btn btn-default btn-primary">Show Gender</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Script -->
+  <script src="main.js"></script>
+</body>
+
+</html>
