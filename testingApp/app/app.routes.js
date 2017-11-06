@@ -5,18 +5,18 @@
       $routeProvider
         .when('/login', {
           templateUrl: 'app/components/login/loginView.html',
-          controller: 'app/components/login/loginController.js'
+          controller: 'loginController'
         })
         .when('/testing', {
           templateUrl: 'app/components/testing/testingView.html',
-          controller: 'app/components/testing/testingController.js'
+          controller: 'testingController'
         })
         .when('/result', {
           templateUrl: 'app/components/result/resultView.html',
-          controller: 'app/components/result/resultController.js'
+          controller: 'resultController'
         })
         .otherwise({
-          templateUrl: 'app/components/login/loginView.html'
+          redirectTo: '/login'
         });
     }]);
 })();

@@ -4,10 +4,11 @@
     controller('loginController', ['$scope', '$http', '$location', LoginController]);
 
   function LoginController($scope, $http, $location) {
-    let username = $scope.username;
-    let password = $scope.password;
 
     $scope.login = function () {
+      let username = $scope.username;
+      let password = $scope.password;
+
       console.log(
         `Username: ${username}
          Password: ${password}`
@@ -32,7 +33,7 @@
       $http(request).then(
         function () {
           console.log('success');
-          // $location.path('/result');
+          $location.path('/testing');
         },
         function () {
           console.log('failure');

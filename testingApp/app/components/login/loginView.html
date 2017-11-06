@@ -6,11 +6,11 @@
   <form>
     <div class="col-md-4 form-group">
       <label for="username">Username: </label>
-      <input type="text" class="form-control" name="username" id="username" value="walter.bates">
+      <input ng-model="username" type="text" class="form-control" name="username" value="walter.bates">
     </div>
     <div class="col-md-4 form-group">
       <label for="password">Password: </label>
-      <input type="password" class="form-control" name="password" id="password" value="bpm">
+      <input ng-model="password" type="password" class="form-control" name="password" value="bpm">
     </div>
     <br>
     <button ng-click="login()" class="btn btn-default btn-primary">Login</button>
