@@ -1,9 +1,9 @@
 (function () {
   angular.
     module('indexApp').
-    controller('loginController', ['$scope', '$http', '$location', LoginController]);
+    controller('loginController', ['$scope', '$http', '$location', '$cookies', LoginController]);
 
-  function LoginController($scope, $http, $location) {
+  function LoginController($scope, $http, $location, $cookies) {
 
     $scope.login = function () {
       let username = $scope.username;
@@ -16,7 +16,7 @@
 
       let data = "username=" + encodeURIComponent(username) +
         "&password=" + encodeURIComponent(password) +
-        "&redirect=true";
+        "&redirect=false";
 
       let request = {
         method: 'POST',
@@ -33,6 +33,7 @@
       $http(request).then(
         function () {
           console.log('success');
+          $cookies.put('user', username);
           $location.path('/testing');
         },
         function () {

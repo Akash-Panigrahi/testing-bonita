@@ -1,4 +1,4 @@
 (function () {
   angular.
-    module('indexApp', ['ngRoute',]);
+    module('indexApp', ['ngRoute', 'ngCookies']);
 })();
